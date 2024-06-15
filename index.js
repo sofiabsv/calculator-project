@@ -17,3 +17,22 @@ function divide(a, b) {
 let firstNumber;
 let secondNumber;
 let operator;
+
+function operate(firstNumber, secondNumber, operator){
+  switch(operator){
+    case "+": 
+      add(firstNumber,secondNumber);
+      break;
+    case "-":
+      subtract(firstNumber,secondNumber);
+      break;
+    case "*":
+      multiply(firstNumber,secondNumber);
+      break;
+    case "/":
+      divide(firstNumber,secondNumber);
+      break;
+    default:
+      return "Invalid operator";  
+  }
+}
