@@ -58,11 +58,23 @@ function populateDisplay() {
       });
     } else if (button.classList.contains("operator")) {
       button.addEventListener("click", (e) => {
-        if (!pendingOperation) {
+        if (pendingOperation && firstNumber && displayValue) {
+          //perform the operation first
+          let result = operate(firstNumber, displayValue, operator).toString();
+          display.textContent = result;
+
+          //result is used for the next operation
+          firstNumber = result;
+          operator = e.target.textContent;
+          displayValue = "";
+          display.textContent = firstNumber + " " + operator;
+
+          //if there is no pending operation, just set the operator
+        } else if (!pendingOperation) {
           firstNumber = displayValue;
           operator = e.target.textContent;
-          pendingOperation = true; //there is a pending operation now
-          displayValue = ""; //reset for the second number
+          pendingOperation = true;
+          displayValue = "";
           display.textContent = firstNumber + " " + operator;
         }
       });
