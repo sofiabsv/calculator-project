@@ -10,4 +10,4 @@ This is a simple calculator application designed to perform basic arithmetic ope
 - Clear: Clear your current display.
 - User Interface: Simple and intuitive UI for easy interaction.
 
-Check it out [here](https://example.com) !
+Check it out [here](https://sofiabsv.github.io/calculator-project/) !
