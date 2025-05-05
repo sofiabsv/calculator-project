@@ -54,8 +54,22 @@ h1 {
   font-weight: 600;
 }
 
+.operator-btns {
+  display: flex;
+}
+
+.operator-btns > div {
+  display: flex;
+  flex-direction: column;
+}
+
 #op {
   background-color: rgb(139, 148, 161);
+}
+
+#op.half-height {
+  height: 40px;
+  
 }
 
 #equal {
