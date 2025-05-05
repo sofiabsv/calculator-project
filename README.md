@@ -7,6 +7,7 @@ This is a simple calculator application designed to perform basic arithmetic ope
 - Subtraction: Subtract one number from another.
 - Multiplication: Multiply two numbers.
 - Division: Divide one number by another.
+- Exponentiation: Raise one number to the power of another.
 - Clear: Clear your current display.
 - User Interface: Simple and intuitive UI for easy interaction.
 
