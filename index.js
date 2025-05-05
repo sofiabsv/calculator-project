@@ -46,9 +46,11 @@ function populateDisplay() {
   buttons.forEach((button) => {
     if (button.classList.contains("number")) {
       button.addEventListener("click", (e) => {
+        console.log(e.target.textContent);
         //if there is already a pending operation, add the number to the first number and the operator
         if (pendingOperation) {
           displayValue += e.target.textContent;
+          console.log(firstNumber, operator, displayValue);
           display.textContent =
             firstNumber + " " + operator + " " + displayValue; // show the whole operation
 
@@ -60,6 +62,7 @@ function populateDisplay() {
       });
     } else if (button.classList.contains("operator")) {
       button.addEventListener("click", (e) => {
+        console.log(e.target.textContent);
         if (pendingOperation && firstNumber && displayValue) {
           //perform the operation first
           let result = operate(firstNumber, displayValue, operator).toString();
@@ -98,6 +101,8 @@ function populateDisplay() {
             displayValue,
             operator
           ).toString(); // Perform the operation
+
+          console.log("= " + displayValue);
           display.textContent = displayValue; // Display the result
 
           //reset for next operation
