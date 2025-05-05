@@ -28,6 +28,8 @@ function operate(firstNumber, secondNumber, operator) {
       return multiply(parseFloat(firstNumber), parseFloat(secondNumber));
     case "/":
       return divide(parseFloat(firstNumber), parseFloat(secondNumber));
+    case "^": 
+      return Math.pow(parseFloat(firstNumber), parseFloat(secondNumber));
     default:
       return "Invalid operator";
   }
